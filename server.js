@@ -1,14 +1,19 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-app.post("/login", (req, res) => {
+// Website files
+app.use(express.static(__dirname));
 
+// Admin Login
+app.post("/login", (req, res) => {
     const { Userid, password } = req.body;
 
     if (
@@ -25,6 +30,9 @@ app.post("/login", (req, res) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
+// Start server
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
