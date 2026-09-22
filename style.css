@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+}
+
+body {
+    width: 99%;
+    background-image: url(images/ff.png);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.login-box {
+    justify-content: center;
+    align-items: center;
+    margin-left: 33%;
+    background: skyblue;
+    margin-top: 8.5%;
+    width: 35%;
+    height: 420px;
+    border: 2px solid black;
+    border-radius: 10%;,
+}
+.login-box h1 {
+   font-weight: bold;
+   margin-top: 15px;
+   text-align: center;
+   color: black;
+   font-size: 38px;
+}
+.login-box h2 {
+    margin-top: 5px;
+    text-align: center;
+    margin: 0;
+    font-size: 22px;
+}
+#name {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 7px;
+    font-size: 30px;
+}
+#UserID{
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 14px;
+}
+#Password {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 15px;
+}
+#Userid,
+#password {
+    width: 90%;
+    height: 35px;
+    border-radius: 10px;
+    margin-left: +8px;
+    font-size: 20px;
+   background: content-box;
+   color: blue;
+   font-weight: bold;
+}
+#login {
+    margin-top: 20px;
+   margin-left: 9%;
+   height: 45px;
+   width: 80%;
+   border-radius: 10px;
+   background-color: olive;
+   text-decoration: none;
+   cursor: pointer;
+}
+#register-account {
+    margin-top: 15px;
+    margin-left: 10%;
+    width: 180px;
+    border-radius: 10px;
+    height: 30px;
+    background: white;
+}
+#forgot-password {
+    margin-left: 1%;
+    width: 180px;
+     border-radius: 10px;
+    height: 30px;
+    background: white;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register_Account</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            text-align: center;
+            justify-content: relative;
+            background-image: url(images/fire.jpg);
+        }
+        h1{
+            font-size: 30px;
+        }
+        label {
+            margin-left: -80px;
+            display: block;
+            margin-top: 25px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        input {
+            margin-top: 5px auto;
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+        }
+        #Name {
+            margin-left: -145px;
+            
+        }
+        #Email {
+            margin-left: -125px;
+        }
+        #Register {
+            margin-top: 30px;
+            margin-left: -15px;
+            width: 100px;
+            font-size: 25px;
+            background-color: yellowgreen;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registation Form</h1>
+    
+    <form action="registaion">
+
+    <label for="name" id="Name">NAME</label>
+    <input type="text" id="name"required> 
+
+    <label for="userid" id="User">USER NAME</label>
+    <input type="text" id="Userid" required >
+
+    <label for="password" id="Password">PASSWORD</label>
+    <input type="password" id="password" required>
+
+    <label for="email" id="Email">E-MAIL</label>
+    <input type="email" name="" id="email" required><br>
+    
+    <button type="button" onclick="register()" id="Register">Register</button>
+    </form>
+
+    <script>
+
+function register() {
+
+    let name = document.getElementById("name").value;
+    let userid = document.getElementById("Userid").value;
+    let password = document.getElementById("password").value;
+    let email = document.getElementById("email").value;
+
+    if (name === "" || userid === "" || password === "" || email === "") {
+        alert("Please fill all details");
+        return;
+    }
+
+    localStorage.setItem("Name", name);
+    localStorage.setItem("Userid", userid);
+    localStorage.setItem("Password", password);
+    localStorage.setItem("Email", email);
+
+    alert("Registration Successful");
+
+    window.location.href = "index.html";
+}
+
+</script>
+   
+</body>
+</html>
