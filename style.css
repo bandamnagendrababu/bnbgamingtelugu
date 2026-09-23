@@ -123,3 +123,26 @@ body {
         box-sizing: border-box;
     }
 }
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    input,
+    button {
+        max-width: 100%;
+    }
+}
