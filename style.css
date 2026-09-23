@@ -86,3 +86,40 @@ body {
     height: 30px;
     background: white;
 }
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    #login-box,
+    #login-screen {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+        box-sizing: border-box;
+    }
+
+    input,
+    button {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
