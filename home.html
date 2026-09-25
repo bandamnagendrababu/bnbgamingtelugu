@@ -5,138 +5,226 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-      /* ================================
-   HOME PAGE MOBILE RESPONSIVE
-   ================================ */
+
+/* =========================================
+   BNB GAMING TELUGU - HOME PAGE CSS
+   DESKTOP + MOBILE RESPONSIVE
+   ========================================= */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html,
 body {
     width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
-/* Main body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   MAIN HOME PAGE
+   ========================================= */
+
 .body {
-    width: 100%;
-    max-width: 890px;
+    width: 890px;
+    max-width: 100%;
     min-height: 460px;
-    height: auto;
     margin: 0 auto;
     background: url("fire.jpg") center/cover no-repeat;
 }
 
-/* Header */
+
+/* =========================================
+   GREEN HEADER
+   ========================================= */
+
 .head {
+    background-color: olive;
     width: 100%;
+    height: 25vh;
     min-height: 180px;
-    height: auto;
-    padding: 10px;
     position: relative;
 }
 
-/* Main heading */
+
+/* =========================================
+   TITLE
+   ========================================= */
+
 h1 {
-    margin: 0;
+    margin-left: 7px;
+    margin-top: 10px;
+    display: inline-flex;
     font-size: 57px;
     font-weight: bold;
     color: white;
 }
 
-/* Images */
-#img1,
-#img2 {
+
+/* =========================================
+   HEADER IMAGES
+   ========================================= */
+
+#img1 {
+    display: flex;
     width: 140px;
     height: auto;
+    margin-top: -100px;
 }
 
-/* Welcome text */
+#img2 {
+    display: flex;
+    width: 140px;
+    height: auto;
+    margin-top: -90px;
+    margin-left: 500px;
+}
+
+
+/* =========================================
+   WELCOME TEXT
+   ========================================= */
+
 #welcome {
-    margin: 15px auto;
-    text-align: center;
-    justify-content: center;
+    display: flex;
+    margin-left: 180px;
+    margin-top: 15px;
     font-size: 50px;
     color: white;
 }
 
-/* Subscribe */
+
+/* =========================================
+   SUBSCRIBE BUTTON
+   ========================================= */
+
 #subsribe {
-    margin: 10px auto;
-    width: 180px;
-    height: 50px;
+    display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-left: 50%;
+    margin-top: -100px;
+
+    width: 17%;
+    height: 50px;
+
     border-radius: 30px;
     border: 2px solid yellow;
-    font-size: 22px;
+
+    font-size: 30px;
     cursor: pointer;
+
     color: white;
     background: transparent;
 }
 
-/* Logout */
+a {
+    text-decoration: none !important;
+}
+
+
+/* =========================================
+   LOGOUT BUTTON
+   ========================================= */
+
 #logout {
-    margin: 15px auto;
-    width: 120px;
-    height: 40px;
+    display: flex;
     justify-content: center;
     align-items: center;
+
+    font-size: 28px;
+
+    width: 10%;
+    height: 35px;
+
     border: 2px solid yellow;
     border-radius: 10px;
+
     background: transparent;
     color: white;
+
     cursor: pointer;
-    font-size: 20px;
+
+    margin-left: 80%;
+    margin-top: -40px;
+
+    font-weight: bold;
 }
 
-/* Menu boxes */
+
+/* =========================================
+   DESKTOP GRID
+   ========================================= */
+
 #box {
     display: grid;
+
     grid-template-columns: repeat(3, 150px);
-    justify-content: center;
+
     align-items: center;
-    gap: 30px;
-    margin: 40px auto;
+    justify-content: center;
+
+    margin: 15%;
+    gap: 250px;
 }
 
-/* Shorts / Videos / Live */
+
+/* =========================================
+   SHORTS / VIDEOS / LIVE
+   ========================================= */
+
 #shorts,
 #videos,
 #live {
     width: 150px;
     height: 100px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     cursor: pointer;
+
     border: 2px solid goldenrod;
     border-radius: 30px;
+
     background: yellow;
     color: orchid;
+
     font-weight: bold;
     font-size: 20px;
-    margin: 0;
+
+    margin-top: -23px;
 }
 
 
-/* =================================
-   MOBILE
-   ================================= */
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
 
 @media screen and (max-width: 768px) {
 
     html,
     body {
         width: 100%;
-        min-width: 100%;
+        margin: 0;
+        padding: 0;
         overflow-x: hidden;
     }
 
+
+    /* Main page */
     .body {
         width: 100%;
         max-width: 100%;
@@ -144,82 +232,151 @@ h1 {
         margin: 0;
     }
 
+
+    /* Green header */
     .head {
         width: 100%;
+        height: auto;
         min-height: 250px;
         padding: 10px;
+
         text-align: center;
     }
 
+
+    /* Title */
     h1 {
-        font-size: 32px;
-        margin: 5px auto;
         display: block;
+
+        margin: 5px auto;
+
+        font-size: 32px;
+
+        text-align: center;
     }
 
+
+    /* Header images */
     #img1,
     #img2 {
-        width: 80px;
+        display: block;
+
+        width: 75px;
+        height: auto;
+
         margin: 5px auto;
     }
 
+
+    /* Welcome */
     #welcome {
+        display: block;
+
         margin: 10px auto;
+
         font-size: 25px;
-        line-height: 1.2;
+
+        text-align: center;
     }
 
+
+    /* Subscribe */
     #subsribe {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
         width: 160px;
         height: 45px;
+
         margin: 15px auto;
-        font-size: 18px;
+
+        font-size: 20px;
     }
 
+
+    /* Logout */
     #logout {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
         width: 110px;
-        height: 38px;
+        height: 40px;
+
         margin: 10px auto;
-        font-size: 18px;
+
+        font-size: 20px;
     }
 
+
+    /* Mobile grid */
     #box {
+        display: grid;
+
         grid-template-columns: 1fr;
+
         gap: 20px;
-        margin: 30px auto;
+
         width: 100%;
+
+        margin: 30px auto;
     }
 
+
+    /* Mobile buttons */
     #shorts,
     #videos,
     #live {
         width: 180px;
         height: 80px;
+
         margin: 0 auto;
+
         font-size: 18px;
     }
 }
 
 
-/* Small phones */
+/* =========================================
+   SMALL MOBILE PHONES
+   ========================================= */
+
 @media screen and (max-width: 400px) {
 
     h1 {
-        font-size: 28px;
+        font-size: 27px;
     }
+
 
     #welcome {
         font-size: 22px;
     }
 
+
     #img1,
     #img2 {
-        width: 65px;
+        width: 60px;
     }
 
-    #box {
-        gap: 15px;
+
+    #subsribe {
+        width: 150px;
+        height: 42px;
+
+        font-size: 18px;
     }
+
+
+    #logout {
+        width: 100px;
+        height: 36px;
+
+        font-size: 18px;
+    }
+
 
     #shorts,
     #videos,
@@ -228,6 +385,7 @@ h1 {
         height: 70px;
     }
 }
+
     </style>
 </head>
 <body>
