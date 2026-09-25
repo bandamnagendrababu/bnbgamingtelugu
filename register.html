@@ -72,26 +72,45 @@
 
 function register() {
 
-    let name = document.getElementById("name").value;
-    let userid = document.getElementById("Userid").value;
+    let name = document.getElementById("name").value.trim();
+    let userid = document.getElementById("Userid").value.trim();
     let password = document.getElementById("password").value;
-    let email = document.getElementById("email").value;
+    let email = document.getElementById("email").value.trim();
 
     if (name === "" || userid === "" || password === "" || email === "") {
         alert("Please fill all details");
         return;
     }
 
-    localStorage.setItem("Name", name);
-    localStorage.setItem("Userid", userid);
-    localStorage.setItem("Password", password);
-    localStorage.setItem("Email", email);
+    // Get existing users
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Check whether User ID already exists
+    let existingUser = users.find(user => user.userid === userid);
+
+    if (existingUser) {
+        alert("User ID already exists");
+        return;
+    }
+
+    // Create new user
+    let newUser = {
+        name: name,
+        userid: userid,
+        password: password,
+        email: email
+    };
+
+    // Add new user
+    users.push(newUser);
+
+    // Save all users
+    localStorage.setItem("users", JSON.stringify(users));
 
     alert("Registration Successful");
 
     window.location.href = "index.html";
 }
-
 </script>
    
 </body>
